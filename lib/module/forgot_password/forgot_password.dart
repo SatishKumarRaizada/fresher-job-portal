@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:hire_me/config/constants/app_icon.dart';
 import 'package:hire_me/config/constants/app_image.dart';
 import 'package:hire_me/config/constants/app_key.dart';
 import 'package:hire_me/config/constants/app_string.dart';
@@ -29,7 +32,7 @@ class ForgotPasswordPageState extends ConsumerState<ForgotPasswordPage> {
                 SizedBox(height: height * 0.02),
                 _backButtonWidget(),
                 SizedBox(height: height * 0.02),
-                Image.asset(AppImage.register, width: 180),
+                SvgPicture.asset(AppIcon.login, width: 180),
                 _forgotDetailWidget(),
               ],
             ),
@@ -45,7 +48,7 @@ class ForgotPasswordPageState extends ConsumerState<ForgotPasswordPage> {
       alignment: Alignment.centerLeft,
       child: IconButton(
         onPressed: _goBack,
-        icon: const Icon(Icons.arrow_back),
+        icon: const Icon(CupertinoIcons.arrow_left),
       ),
     );
   }
@@ -87,7 +90,7 @@ class ForgotPasswordPageState extends ConsumerState<ForgotPasswordPage> {
       width: width * 0.9,
       child: TextButton(
         onPressed: () {},
-        child: const Text(AppString.loginButton),
+        child: const Text(AppString.requestPassword),
       ),
     );
   }

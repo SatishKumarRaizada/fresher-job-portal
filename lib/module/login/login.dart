@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -31,9 +32,9 @@ class LoginPageState extends ConsumerState<LoginPage> {
             child: Column(
               children: [
                 SizedBox(height: height * 0.04),
-                Image.asset(AppImage.login, width: 180),
+                SvgPicture.asset(AppIcon.login, width: 180),
                 _userLoginWidget(),
-                SizedBox(height: height * 0.04),
+                SizedBox(height: height * 0.02),
                 _userLoginOptionWidget(),
               ],
             ),
@@ -50,7 +51,11 @@ class LoginPageState extends ConsumerState<LoginPage> {
       child: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const Text(AppString.welcomeBack, style: Styles.headline20),
+            const Text(AppString.loginToContinue, style: Styles.lightText18),
+            SizedBox(height: height * 0.02),
             _usernameWidget(),
             SizedBox(height: height * 0.02),
             _passwordWidget(),
@@ -85,6 +90,10 @@ class LoginPageState extends ConsumerState<LoginPage> {
       prefixWidget: const Icon(
         Icons.lock,
         key: Key(WidgetKey.passwordIcon),
+      ),
+      suffixWidget: IconButton(
+        onPressed: () {},
+        icon: Icon(isSecure ? CupertinoIcons.eye_slash : CupertinoIcons.eye),
       ),
       onChange: () {},
     );
@@ -143,18 +152,15 @@ class LoginPageState extends ConsumerState<LoginPage> {
         ),
         SizedBox(height: height * 0.01),
         const Align(alignment: Alignment.center, child: Text('-or-')),
-        SizedBox(height: height * 0.01),
-        Card(
-          child: Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _googleWidget(),
-                _facebookWidget(),
-                _appleWidget(),
-              ],
-            ),
+        Padding(
+          padding: const EdgeInsets.all(15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              _googleWidget(),
+              _facebookWidget(),
+              _appleWidget(),
+            ],
           ),
         ),
       ],

@@ -7,9 +7,14 @@ class AppString {
   static const String register = 'Register';
   static const String newAccount = 'Dont have an account?';
   static const String signUp = 'Sign-up';
+  static const String welcomeBack = 'Welcome Back!';
+  static const String loginToContinue = 'Login to continue';
 
   // Register strings
   static const String name = 'Enter full name';
   static const String email = 'Enter email address';
   static const String mobile = 'Enter mobile number';
+
+  // Forgot password strings
+  static const String requestPassword = 'Request Password';
 }

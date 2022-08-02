@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:hire_me/config/constants/app_icon.dart';
 import 'package:hire_me/config/constants/app_image.dart';
 import 'package:hire_me/config/constants/app_key.dart';
 import 'package:hire_me/config/constants/app_string.dart';
@@ -28,7 +31,7 @@ class RegisterPageState extends ConsumerState<RegisterPage> {
               children: [
                 SizedBox(height: height * 0.02),
                 _backButtonWidget(),
-                Image.asset(AppImage.forgot, width: 180),
+                SvgPicture.asset(AppIcon.forgot, width: 180),
                 _userLoginWidget(),
               ],
             ),
@@ -43,7 +46,7 @@ class RegisterPageState extends ConsumerState<RegisterPage> {
       alignment: Alignment.centerLeft,
       child: IconButton(
         onPressed: _goBack,
-        icon: const Icon(Icons.arrow_back),
+        icon: const Icon(CupertinoIcons.arrow_left),
       ),
     );
   }

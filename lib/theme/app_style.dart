@@ -16,6 +16,7 @@ class Styles {
   static const TextStyle subheading18 = TextStyle(
     fontSize: 18,
     fontFamily: 'HireBold',
+    fontWeight: FontWeight.w300,
   );
   static const TextStyle subheading16 = TextStyle(
     fontSize: 16,
