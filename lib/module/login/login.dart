@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hire_me/config/constants/app_icon.dart';
-import 'package:hire_me/config/constants/app_image.dart';
 import 'package:hire_me/config/constants/app_key.dart';
 import 'package:hire_me/config/constants/app_string.dart';
 import 'package:hire_me/config/route/app_route.dart';
@@ -78,7 +77,7 @@ class LoginPageState extends ConsumerState<LoginPage> {
         Icons.person,
         key: Key(WidgetKey.usernameIcon),
       ),
-      onChange: () {},
+      onChange: (String str) {},
     );
   }
 
@@ -95,7 +94,7 @@ class LoginPageState extends ConsumerState<LoginPage> {
         onPressed: () {},
         icon: Icon(isSecure ? CupertinoIcons.eye_slash : CupertinoIcons.eye),
       ),
-      onChange: () {},
+      onChange: (String str) {},
     );
   }
 

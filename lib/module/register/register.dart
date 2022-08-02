@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hire_me/config/constants/app_icon.dart';
-import 'package:hire_me/config/constants/app_image.dart';
 import 'package:hire_me/config/constants/app_key.dart';
 import 'package:hire_me/config/constants/app_string.dart';
 import 'package:hire_me/widgets/app_textfield.dart';
@@ -96,7 +95,7 @@ class RegisterPageState extends ConsumerState<RegisterPage> {
         Icons.email,
         key: Key(WidgetKey.usernameIcon),
       ),
-      onChange: () {},
+      onChange: (String str) {},
     );
   }
 
@@ -109,7 +108,7 @@ class RegisterPageState extends ConsumerState<RegisterPage> {
         Icons.phone_android,
         key: Key(WidgetKey.usernameIcon),
       ),
-      onChange: () {},
+      onChange: (String str) {},
     );
   }
 
@@ -122,7 +121,7 @@ class RegisterPageState extends ConsumerState<RegisterPage> {
         Icons.lock,
         key: Key(WidgetKey.passwordIcon),
       ),
-      onChange: () {},
+      onChange: (String str) {},
     );
   }
 

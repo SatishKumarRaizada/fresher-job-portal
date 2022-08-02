@@ -7,6 +7,7 @@ import 'package:hire_me/config/constants/app_icon.dart';
 import 'package:hire_me/config/constants/app_image.dart';
 import 'package:hire_me/config/constants/app_key.dart';
 import 'package:hire_me/config/constants/app_string.dart';
+import 'package:hire_me/theme/app_style.dart';
 import 'package:hire_me/widgets/app_textfield.dart';
 
 class ForgotPasswordPage extends ConsumerStatefulWidget {
@@ -60,7 +61,13 @@ class ForgotPasswordPageState extends ConsumerState<ForgotPasswordPage> {
       child: Padding(
         padding: const EdgeInsets.all(15),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const Text(
+              AppString.requestPassword,
+              style: Styles.headline18,
+            ),
+            SizedBox(height: height * 0.02),
             _usernameWidget(),
             SizedBox(height: height * 0.04),
             _loginButtonWidget(),
@@ -76,10 +83,10 @@ class ForgotPasswordPageState extends ConsumerState<ForgotPasswordPage> {
       hintText: AppString.username,
       keyboardType: TextInputType.emailAddress,
       prefixWidget: const Icon(
-        Icons.person,
+        Icons.email,
         key: Key(WidgetKey.usernameIcon),
       ),
-      onChange: () {},
+      onChange: (String str) {},
     );
   }
 
@@ -90,7 +97,7 @@ class ForgotPasswordPageState extends ConsumerState<ForgotPasswordPage> {
       width: width * 0.9,
       child: TextButton(
         onPressed: () {},
-        child: const Text(AppString.requestPassword),
+        child: const Text(AppString.submit),
       ),
     );
   }

@@ -16,5 +16,6 @@ class AppString {
   static const String mobile = 'Enter mobile number';
 
   // Forgot password strings
-  static const String requestPassword = 'Request Password';
+  static const String requestPassword = 'Request Password?';
+  static const String submit = 'Submit';
 }
