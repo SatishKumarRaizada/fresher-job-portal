@@ -14,8 +14,14 @@ class AppString {
   static const String name = 'Enter full name';
   static const String email = 'Enter email address';
   static const String mobile = 'Enter mobile number';
+  static const String bySigning = 'By signing up, you are agree to our ';
+  static const String termsCondition = 'Terms & Condition ';
+  static const String andLabel = 'and ';
+  static const String privacyPolicy = 'Privacy Policy';
 
   // Forgot password strings
   static const String requestPassword = 'Request Password?';
   static const String submit = 'Submit';
+
+  //
 }

@@ -119,7 +119,7 @@ class LoginPageState extends ConsumerState<LoginPage> {
     return SizedBox(
       width: width * 0.9,
       child: TextButton(
-        onPressed: () {},
+        onPressed: _navigateToDashboard,
         child: const Text(AppString.loginButton),
       ),
     );
@@ -209,6 +209,12 @@ class LoginPageState extends ConsumerState<LoginPage> {
   void _navigateToForgotPassword() async {
     HapticFeedback.selectionClick();
     await Navigator.pushNamed(context, Routes.forgotRoute);
+  }
+
+  // Navigate to forgot password screen
+  void _navigateToDashboard() async {
+    HapticFeedback.selectionClick();
+    await Navigator.pushNamed(context, Routes.dashboardRoute);
   }
 
   // Hide keyboard

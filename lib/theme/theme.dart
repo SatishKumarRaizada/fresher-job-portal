@@ -119,15 +119,8 @@ class AppTheme {
     listTileTheme: ListTileThemeData(
       iconColor: AppColors.appBlack,
       minLeadingWidth: 5,
-      dense: true,
       contentPadding: const EdgeInsets.symmetric(horizontal: 10),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
-        side: const BorderSide(
-          color: AppColors.appColor,
-          width: 0.5,
-        ),
-      ),
+      enableFeedback: true,
     ),
     cardTheme: CardTheme(
       shadowColor: AppColors.appBlack,

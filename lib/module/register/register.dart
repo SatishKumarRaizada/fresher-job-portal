@@ -6,6 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hire_me/config/constants/app_icon.dart';
 import 'package:hire_me/config/constants/app_key.dart';
 import 'package:hire_me/config/constants/app_string.dart';
+import 'package:hire_me/theme/app_style.dart';
 import 'package:hire_me/widgets/app_textfield.dart';
 
 class RegisterPage extends ConsumerStatefulWidget {
@@ -32,6 +33,8 @@ class RegisterPageState extends ConsumerState<RegisterPage> {
                 _backButtonWidget(),
                 SvgPicture.asset(AppIcon.forgot, width: 180),
                 _userLoginWidget(),
+                SizedBox(height: height * 0.02),
+                _userTermsAndCondition(),
               ],
             ),
           ),
@@ -134,6 +137,31 @@ class RegisterPageState extends ConsumerState<RegisterPage> {
         onPressed: () {},
         child: const Text(AppString.register),
       ),
+    );
+  }
+
+  // Terms and condition widget for the registration
+  Widget _userTermsAndCondition() {
+    return Wrap(
+      alignment: WrapAlignment.center,
+      children: [
+        const Text(AppString.bySigning, style: Styles.lightText14),
+        GestureDetector(
+          onTap: () {},
+          child: const Text(
+            AppString.termsCondition,
+            style: Styles.blueText14,
+          ),
+        ),
+        const Text(AppString.andLabel, style: Styles.lightText14),
+        GestureDetector(
+          onTap: () {},
+          child: const Text(
+            AppString.privacyPolicy,
+            style: Styles.blueText14,
+          ),
+        ),
+      ],
     );
   }
 

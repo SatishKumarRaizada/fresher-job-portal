@@ -7,6 +7,7 @@ class Routes {
   static String root = '/';
   static String registerRoute = '/login/register';
   static String forgotRoute = '/login/forgot';
+  static String dashboardRoute = '/dashboard';
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -23,6 +24,11 @@ class Routes {
     router.define(
       forgotRoute,
       handler: forgotRouteHandler,
+      transitionType: TransitionType.inFromRight,
+    );
+    router.define(
+      dashboardRoute,
+      handler: dashboardRouteHandler,
       transitionType: TransitionType.inFromRight,
     );
   }

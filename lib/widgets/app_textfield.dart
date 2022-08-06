@@ -11,6 +11,7 @@ class AppTextField extends StatelessWidget {
   final bool isSecure;
   final int lineHeight;
   final bool isEnabled;
+  final bool isDense;
   final TextInputType keyboardType;
   final int maxlength;
 
@@ -28,6 +29,7 @@ class AppTextField extends StatelessWidget {
     this.isEnabled = true,
     this.keyboardType = TextInputType.text,
     this.maxlength = 5000,
+    this.isDense = false,
   }) : super(key: key);
 
   @override
@@ -40,6 +42,7 @@ class AppTextField extends StatelessWidget {
       keyboardType: keyboardType,
       maxLength: maxlength,
       decoration: InputDecoration(
+        isDense: isDense,
         hintText: hintText,
         prefixIcon: prefixWidget,
         suffixIcon: suffixWidget,
