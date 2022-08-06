@@ -29,7 +29,7 @@ class Styles {
   );
   static const TextStyle headline16 = TextStyle(
     fontSize: 16,
-    fontFamily: 'HireRegular',
+    fontFamily: 'HireBold',
   );
   static const TextStyle lightText16 = TextStyle(
     fontSize: 16,
@@ -38,6 +38,11 @@ class Styles {
   );
   static const TextStyle lightText18 = TextStyle(
     fontSize: 18,
+    fontFamily: 'HireRegular',
+    fontWeight: FontWeight.w300,
+  );
+  static const TextStyle lightText20 = TextStyle(
+    fontSize: 20,
     fontFamily: 'HireRegular',
     fontWeight: FontWeight.w300,
   );

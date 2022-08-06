@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hire_me/config/constants/app_icon.dart';
-import 'package:hire_me/config/constants/app_image.dart';
 import 'package:hire_me/config/constants/app_key.dart';
 import 'package:hire_me/config/constants/app_string.dart';
 import 'package:hire_me/theme/app_style.dart';

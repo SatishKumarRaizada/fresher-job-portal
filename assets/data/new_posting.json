@@ -1,22 +1,27 @@
 [
     {
-        "title": "Product design intern",
-        "subtitle": "Intern, Bangalore, India",
-        "icon": "google"
+        "title": "Senior Engineer",
+        "subtitle": "Mobile Developer, Maersk Bangalore, India",
+        "icon": "maersk"
     },
     {
-        "title": "Software engineer",
-        "subtitle": "Fulltime, Bangalore, India",
+        "title": "Product Design Intern",
+        "subtitle": "Intern,Apple Bangalore, India",
+        "icon": "apple"
+    },
+    {
+        "title": "Software Engineer",
+        "subtitle": "Fulltime,Facebook Bangalore, India",
         "icon": "facebook"
     },
     {
-        "title": "Design engineer",
-        "subtitle": "Intern, Bangalore, India",
-        "icon": "google"
+        "title": "Design Engineer",
+        "subtitle": "Intern, Tesla Bangalore, India",
+        "icon": "tesla"
     },
     {
-        "title": "Mobile engineer",
-        "subtitle": "Microsoft, Bangalore, India",
-        "icon": "facebook"
+        "title": "Mobile Engineer",
+        "subtitle": "iOS Native, Bangalore, India",
+        "icon": "microsoft"
     }
 ]

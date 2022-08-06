@@ -47,12 +47,20 @@ class _NewJobWidgetState extends State<NewJobWidget> {
           itemBuilder: (context, index) {
             return Card(
               child: ListTile(
-                title: Text(newPosting[index].title!),
-                subtitle: Text(newPosting[index].subtitle!),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                title: Text(newPosting[index].title!, style: Styles.lightText18),
+                subtitle: Text(newPosting[index].subtitle!, style: Styles.lightText14),
                 leading: IconButton(
                   onPressed: () {},
-                  icon: SvgPicture.asset('assets/icons/${newPosting[index].icon!}.svg'),
+                  icon: SvgPicture.asset('assets/icons/${newPosting[index].icon!}.svg', width: 120),
                 ),
+                trailing: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(CupertinoIcons.ellipsis_vertical),
+                ),
+                onTap: () {},
               ),
             );
           },

@@ -59,6 +59,7 @@ class DashboardPageState extends ConsumerState<DashboardPage> {
           onPressed: () {},
           icon: const Icon(CupertinoIcons.bell),
         ),
+        const SizedBox(width: 10),
       ],
     );
   }
@@ -68,7 +69,7 @@ class DashboardPageState extends ConsumerState<DashboardPage> {
     return Row(
       children: const [
         Text('Welcome back, '),
-        Text('Satish!', style: Styles.blueBoldText20),
+        Text('Srishti!', style: Styles.blueBoldText20),
       ],
     );
   }
