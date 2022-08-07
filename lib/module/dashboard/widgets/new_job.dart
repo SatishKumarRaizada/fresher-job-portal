@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hire_me/config/route/app_route.dart';
 import 'package:hire_me/module/dashboard/model/new_posting.dart';
 import 'package:hire_me/theme/app_style.dart';
 import 'dart:convert';
@@ -60,12 +61,16 @@ class _NewJobWidgetState extends State<NewJobWidget> {
                   onPressed: () {},
                   icon: const Icon(CupertinoIcons.ellipsis_vertical),
                 ),
-                onTap: () {},
+                onTap: navTodetail,
               ),
             );
           },
         )
       ],
     );
+  }
+
+  void navTodetail() async {
+    await Navigator.pushNamed(context, Routes.detailRoute);
   }
 }

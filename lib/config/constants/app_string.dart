@@ -23,5 +23,7 @@ class AppString {
   static const String requestPassword = 'Request Password?';
   static const String submit = 'Submit';
 
-  //
+  // Job detail
+  static const String detailDescription =
+      'Mobile engineers design, develop, and implement software programs for smartphones and other mobile devices. They often specialize in a certain type of operating system, such as Android or iOS.';
 }

@@ -5,4 +5,5 @@ class AppIcon {
   static const String login = 'assets/icons/login.svg';
   static const String register = 'assets/icons/register.svg';
   static const String forgot = 'assets/icons/forgot.svg';
+  static const String goal = 'assets/icons/goal.svg';
 }

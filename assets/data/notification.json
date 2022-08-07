@@ -1,0 +1,27 @@
+[
+    {
+        "title": "React Native, Microsoft, India",
+        "subtitle": "Microsoft confirms the receiving of application",
+        "icon": "microsoft"
+    },
+    {
+        "title": "Senior Engineer, Mobile, Maersk",
+        "subtitle": "You have been selected for the next round of the interview",
+        "icon": "maersk"
+    },
+    {
+        "title": "iOS Native Engineer, Apple",
+        "subtitle": "Sorry to inform but we would not be able to proceed with you, may next time.",
+        "icon": "apple"
+    },
+    {
+        "title": "Quality Engineer, Maersk",
+        "subtitle": "Congratulation on the clearing the second round of the interview.",
+        "icon": "maersk"
+    },
+    {
+        "title": "Mobile Engineer, Tesla",
+        "subtitle": "We would like to inform you that you have been selected for the role, you would hear from us soon.",
+        "icon": "tesla"
+    }
+]

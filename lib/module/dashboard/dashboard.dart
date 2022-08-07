@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hire_me/config/constants/app_string.dart';
+import 'package:hire_me/config/route/app_route.dart';
+import 'package:hire_me/config/utilities/tap_feedback.dart';
 import 'package:hire_me/module/dashboard/widgets/new_job.dart';
 import 'package:hire_me/theme/app_style.dart';
 import 'package:hire_me/module/dashboard/widgets/category.dart';
@@ -56,7 +58,7 @@ class DashboardPageState extends ConsumerState<DashboardPage> {
       title: const Text(AppString.appName),
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: _navToNotification,
           icon: const Icon(CupertinoIcons.bell),
         ),
         const SizedBox(width: 10),
@@ -80,7 +82,7 @@ class DashboardPageState extends ConsumerState<DashboardPage> {
       style: OutlinedButton.styleFrom(
         alignment: Alignment.centerLeft,
       ),
-      onPressed: () {},
+      onPressed: _navToSearch,
       icon: const Icon(Icons.search),
       label: const Text('Search'),
     );
@@ -96,8 +98,21 @@ class DashboardPageState extends ConsumerState<DashboardPage> {
     return const NewJobWidget();
   }
 
+  // Navigate to search page
+  void _navToSearch() async {
+    tapFeedback();
+    await Navigator.pushNamed(context, Routes.searchRoute);
+  }
+
+  // Navigate to search page
+  void _navToNotification() async {
+    tapFeedback();
+    await Navigator.pushNamed(context, Routes.notificationRoute);
+  }
+
   // Hide keyboard
   void _hideKeyboard() {
+    tapFeedback();
     FocusScope.of(context).unfocus();
   }
 } //End of the class
